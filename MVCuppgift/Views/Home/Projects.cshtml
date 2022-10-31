@@ -1,0 +1,22 @@
+﻿@model IEnumerable<MVCuppgift.Models.ProjectModel>
+
+@{
+    ViewData["Title"] = "Projects";
+}
+
+<h1 class="headtitle">Projects</h1>
+
+
+
+
+@foreach (var item in Model) {
+    <div class="project-container">
+        <h2>
+            <a href="@Html.DisplayFor(modelItem => item.ProjectLink)">@Html.DisplayFor(modelItem => item.ProjectName)</a>
+        </h2>
+        <p>
+            @Html.DisplayFor(modelItem => item.ProjectDescription)
+        </p>
+    </div>
+ 
+}

@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="~/images/logo.gif" id="logo" />
+            <ul>
+                <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                <li><a asp-controller="Home" asp-action="About">About</a></li>
+                <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
+                <li><a asp-controller="Home" asp-action="Projects">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        @RenderBody()
+    </div>
+    <footer id="footer">
+        <p>&copy; Seif - @DateTime.Now.ToString("yyyy-MM-dd")</p>
+    </footer>
+</body>
+</html>
