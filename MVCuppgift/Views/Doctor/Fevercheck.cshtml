@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Check your fever";
+    string feverTemperature = MVCuppgift.Models.FeverModel.Temperature;
+    string feverStatus = MVCuppgift.Models.FeverModel.CheckFever();
+    
+}
+
+<h1>@feverStatus</h1>
+
+
+@using (Html.BeginForm("Fevercheck", "Doctor")){
+    <p>Enter temperature</p>
+    <input type="text" name="temperature" value="">
+    <input type="submit" value="Submit" class="submit">
+
+}

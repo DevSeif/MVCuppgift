@@ -8,6 +8,8 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
+app.MapControllerRoute(name: "doctor", pattern: "{controller=Doctor}/{action=Fevercheck}/{id?}");
+
 
 
 app.Run();
