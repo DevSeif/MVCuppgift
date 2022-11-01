@@ -10,7 +10,6 @@
 
 @using (Html.BeginForm("Fevercheck", "Doctor")){
     <p>Enter temperature</p>
-    <input type="text" name="temperature" value="">
-    <input type="submit" value="Submit" class="submit">
-
+    <input type="number" name="temperature" required>
+    <input type="submit" value="Submit">
 }

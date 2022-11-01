@@ -5,7 +5,6 @@ namespace MVCuppgift.Controllers
 {
     public class DoctorController : Controller
     {
-        [HttpGet]
         public IActionResult Fevercheck()
         {
             return View();
