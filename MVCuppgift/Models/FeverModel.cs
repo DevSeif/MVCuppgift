@@ -2,12 +2,10 @@
 {
     public class FeverModel
     {
-        public static string Temperature { get; set; }
 
-        public static string CheckFever()
+        public static string CheckFever(string temperature)
         {
-            try { 
-            if (int.Parse(Temperature) >= 37)
+            if (int.Parse(temperature) >= 37)
             {
                 return "You have fever";
             }
@@ -15,11 +13,7 @@
             {
                 return "You don't have fever";
             }
-            }
-            catch { 
 
-                return "Fever check";
-            }
         }
     }
 }

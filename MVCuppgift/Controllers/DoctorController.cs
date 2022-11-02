@@ -13,7 +13,8 @@ namespace MVCuppgift.Controllers
         [HttpPost]
         public IActionResult Fevercheck(string temperature)
         {
-            FeverModel.Temperature = temperature;
+            string feverStatus = FeverModel.CheckFever(temperature);
+            ViewBag.Msg = feverStatus;
             return View();
         }
 
